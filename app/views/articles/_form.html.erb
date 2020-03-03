@@ -1,0 +1,15 @@
+<div class="form">
+  <%= form_for(article) do |f| %>
+    <div class="box_form">
+      <h3><%= f.label :title %></h3>
+      <%= f.text_field :title, :class => 'titles' %>
+    </div>
+    <div class="box_form">
+      <h3><%= f.label :content %></h3>
+      <%= f.text_area :content, :class => 'detail' %>
+    </div>
+    <div class="box_form">
+      <%= f.submit :class => 'button' %>
+    </div>
+  <% end %>
+</div>

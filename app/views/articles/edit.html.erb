@@ -1,0 +1,8 @@
+<h2>Edit <%= @article.title %></h2>
+
+<%= render 'form', article: @article %>
+
+<div class="link">
+  <i class="las la-history"></i>
+  <%= link_to "Back to list", articles_path, :class => 'link' %>
+</div>

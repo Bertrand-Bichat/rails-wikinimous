@@ -1,0 +1,29 @@
+<div class="container">
+  <h2><%= @article.title %></h2>
+
+  <div class="details">
+    <p><%= @article.content %></p>
+  </div>
+
+  <div class="link">
+    <i class="las la-history"></i>
+    <%= link_to "Back to list", articles_path, :class => 'link' %>
+  </div>
+
+  <div class="footer">
+    <div class="edit">
+      <button name="button" type="submit" class="button_2">
+        <i class="las la-pen"></i> <%= link_to "Edit this article", edit_article_path(@article), :class => 'button_3' %>
+      </button>
+    </div>
+
+    <div class="detsroy">
+      <i class="las la-trash-alt"></i>
+      <%= link_to "Delete",
+          article_path(@article),
+          method: :delete,
+          :class => 'link',
+          data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</div>
